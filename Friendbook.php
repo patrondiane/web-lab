@@ -2,31 +2,36 @@
 <html>
     <head>
         <title>Friendbook</title>
-        <meta charset="utf-8" />
-    </head>
-    <body>  
-
-        <header bgcolor="black">
-       	    <h1 color="white">
-            Friend book
-            </h1>
-        </header>
-        	
-        <form action="Friendbook.php" method="post">
-            Name: <input type="text" name="name">
-            <input type="submit">
-        </form>
-
-        <?php
-
-        $filename = 'friens.txt';
-        $file = fopen($filename,"r");
-        while (!feof($file)){
-            $ligne = fgets($filename);
+        <meta charset="utf-8" />    
+    <style>      
+       header{
+        background-color:#777;
+        padding:10px;
+        text-align:center;
+        color:white;
         }
-
-        $file = fopen($filename, "a");
-        fwrite($filename, "some string");
-        ?>
+        
+        footer{
+        background-color:#777
+        padding:10px;
+        text-align:center;
+        color:white;
+        }
+        </style>
+        </head>
+    
+        
+   <body>
+        <?php
+            include('header.html');
+         ?>
+         <br>
+       <form action="index.php" method="post">
+           Name:<input type="text" name="name">
+           <input type="submit" value="Add new friend">
+       </form>
+        $filename = 'friens.txt';
+        $nameFilter="";
+       if()
     </body>
 </html>
